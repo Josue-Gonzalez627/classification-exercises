@@ -1,2 +1,3 @@
 # classification-exercises
-Classification Exercises
+Classification Exercises 
+1st Methodology
