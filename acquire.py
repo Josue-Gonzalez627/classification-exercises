@@ -6,6 +6,20 @@ import os
 
 def check_file_exists(filename, query, url):
     '''
+    Args:
+        filename (str): The name of the database
+        query (str, optional): The SQL query to execute, 'SELECT * FROM...'
+        url (env function): The  function in env.py file that connects to the SQL database.
+        
+        MUST have your own env.py file to replicate. Formatted as:
+    
+    def get_db_url(db, 
+                   user=user, 
+                   password=password, 
+                   host=host):
+        return (f'mysql+pymysql://{user}:{password}@{host}/{db}')
+        
+        
     As the name implies, this here is to see if the file(csv) we are calling/using exists AND what to do 
     if it doesn't exist. 
     If it doesn't exist, it will read the query using the url (env info) and makes it into a csv file!
